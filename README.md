@@ -17,7 +17,9 @@ CentOS(64bit)‚ğ‘O’ñ‚Éì‚ç‚ê‚Ä‚¢‚Ü‚·‚ªA‘¼‚ÌOS‚Å‚à•ÏX‚Í•K—v‚©‚à‚µ‚ê‚È‚¢‚Å‚·‚ªA“
 ˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ÅƒCƒ“ƒXƒg[ƒ‹‚µ‚Äg‚¤B
 
 yum install git -y
+
 git clone git://github.com/colun/marathon-cpp.git .
+
 ./install
 
 ©“®Ì“_cron‚Ìİ’è
