@@ -1,4 +1,4 @@
-Ž©“®Ì“_ƒeƒ“ƒvƒŒ[ƒg in ƒNƒ‰ƒEƒh for ƒ}ƒ‰ƒ\ƒ“ƒ}ƒbƒ`
+Ž©“®Ì“_ƒeƒ“ƒvƒŒ[ƒg in ƒNƒ‰ƒEƒh for ƒ}ƒ‰ƒ\ƒ“ƒ}ƒbƒ` (C++”Å)
 ==================================================
 
 –{Ž©“®Ì“_ƒVƒXƒeƒ€‚ÍA‘¼‚ÌƒVƒXƒeƒ€‚Æ‚Ì‹¤‘¶‚ª‰Â”\‚È—l‚É‚Íì‚ç‚ê‚Ä‚¢‚Ü‚¹‚ñB
@@ -12,6 +12,10 @@ CentOS(64bit)‚ð‘O’ñ‚Éì‚ç‚ê‚Ä‚¢‚Ü‚·‚ªA‘¼‚ÌOS‚Å‚à•ÏX‚Í•K—v‚©‚à‚µ‚ê‚È‚¢‚Å‚·‚ªA“
 **¦¦¦‚±‚ÌƒvƒƒWƒFƒNƒg‚ÍA‚Ü‚¾ì‚è‚©‚¯‚Å‚·B¦¦¦**
 
 **¦¦¦‹ß“ú’†‚ÉŒŸØ‚È‚Ç‚às‚¢AŽg‚¦‚éó‘Ô‚Ü‚ÅŽ‚Á‚Ä‚¢‚­‚Â‚à‚è‚È‚Ì‚ÅA‚à‚¤‚µ‚Î‚ç‚­‚¨‘Ò‚¿‰º‚³‚¢B¦¦¦**
+
+ƒ‰ƒCƒZƒ“ƒX‚ÍŒ»Ý‚ÌŠ•t‚¯‚Ä‚Ü‚¹‚ñil‚¦’†j‚ªAƒ[ƒJƒ‹‚Å‚µ‚©Žg‚í‚È‚¢ƒc[ƒ‹‚Å‚·‚µAƒRƒ“ƒeƒXƒg‚ÉƒTƒuƒ~ƒbƒg‚·‚é‚à‚Ì‚Æ‚Íˆá‚¤‚Ì‚ÅA•t‚¯‚È‚­‚Ä‚à’N‚à¢‚ç‚È‚¢‚¾‚ë‚¤‚È‚Ÿ‚ÆBBB
+
+Java”ÅAC#”ÅAPython”Å‚È‚Ç‚ðì‚Á‚ÄŒöŠJ‚·‚éê‡‚ÍA‚½‚Ô‚ñƒ‰ƒCƒZƒ“ƒX‚Ì–â‘è‚ªo‚Ä‚­‚é‹C‚ª‚·‚é‚Ì‚ÅAƒ‰ƒCƒZƒ“ƒX‚ð•t‚¯‚é—l‚É‹}‚©‚µ‚Ä‚­‚¾‚³‚¢BiTwitterã‚Ìcolun‚Ü‚ÅIj
 
 “±“ü
 ----
