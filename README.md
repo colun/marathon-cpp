@@ -2,9 +2,11 @@
 ==================================================
 
 –{Ž©“®Ì“_ƒVƒXƒeƒ€‚ÍA‘¼‚ÌƒVƒXƒeƒ€‚Æ‚Ì‹¤‘¶‚ª‰Â”\‚È—l‚É‚Íì‚ç‚ê‚Ä‚¢‚Ü‚¹‚ñB
+
 ‚Ü‚Á‚³‚ç‚ÈƒT[ƒo[‚ðƒNƒ‰ƒEƒhã‚ÉŽØ‚è‚é‚È‚Ç‚µ‚ÄAƒ}ƒ‰ƒ\ƒ“ƒ}ƒbƒ`’†‚¾‚¯Žg‚¢“|‚·‚Ì‚ª³‚µ‚¢Žg‚¢•û‚Å‚·B
 
 CentOS(64bit)‚ð‘O’ñ‚Éì‚ç‚ê‚Ä‚¢‚Ü‚·‚ªA‘¼‚ÌOS‚Å‚à•ÏX‚Í•K—v‚©‚à‚µ‚ê‚È‚¢‚Å‚·‚ªA“®‚­‰Â”\«‚ª‚ ‚è‚Ü‚·B
+
 i64bit“Á—L‚Ì‚±‚Æ‚ð‚µ‚Ä‚¢‚é‚í‚¯‚Å‚Í‚È‚­A’P‚ÉƒeƒXƒg—p‚ÉŽg‚Á‚Ä‚¢‚é‚Ì‚ª64bit‚Æ‚¢‚¤‚¾‚¯‚Ì˜b‚Å‚·j
 
 **¦¦¦‚±‚ÌƒvƒƒWƒFƒNƒg‚ÍA‚Ü‚¾ì‚è‚©‚¯‚Å‚·B¦¦¦**
@@ -14,13 +16,17 @@ CentOS(64bit)‚ð‘O’ñ‚Éì‚ç‚ê‚Ä‚¢‚Ü‚·‚ªA‘¼‚ÌOS‚Å‚à•ÏX‚Í•K—v‚©‚à‚µ‚ê‚È‚¢‚Å‚·‚ªA“
 “±“ü
 ----
 
-ˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ÅƒCƒ“ƒXƒg[ƒ‹‚µ‚ÄŽg‚¤B
+‚±‚ÌƒvƒƒWƒFƒNƒg‚ðAƒvƒ‰ƒCƒx[ƒg‚ÈgitƒŠƒ|ƒWƒgƒŠ‚Æ‚µ‚Ä‚Ç‚±‚©‚É•¡»‚µ‚ÄŽg‚Á‚Ä‚­‚¾‚³‚¢B
+
+‚Ü‚Á‚³‚ç‚ÈOSiCentOS6 64bit„§j‚É‘Î‚µ‚ÄArootŒ ŒÀ‚É‚ÄAˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ÅƒCƒ“ƒXƒg[ƒ‹‚·‚éB
 
 yum install git -y
 
-git clone git://github.com/colun/marathon-cpp.git .
+git clone git://y‚ ‚È‚½‚ÌgitƒŠƒ|ƒWƒgƒŠz.git .
 
 ./install
+
+i‚¢‚Á‚»A‚±‚Ì–Ú“I‚É‚µ‚©Žg‚í‚È‚¢ƒT[ƒo[‚É‚È‚é‚Ì‚ÅAroot‚ÌrootƒtƒHƒ‹ƒ_‚É“ü‚ê‚Ä‚µ‚Ü‚¤‚Ì‚ª•Ö—˜‚©‚àj
 
 Ž©“®Ì“_cron‚ÌÝ’è
 ---------------
