@@ -1,0 +1,62 @@
+#!/usr/bin/php
+<?php
+chdir(dirname(__FILE__) . "/..");
+date_default_timezone_set('Asia/Tokyo');
+
+$db = mysql_connect();
+mysql_set_charset("utf8");
+mysql_select_db("topcoder");
+
+$result = mysql_query("select * from eval where will < now() order by seed");
+$tasks = array();
+while ($assoc = mysql_fetch_assoc($result)) {
+	$tasks[] = $assoc;
+}
+
+//shuffle($tasks);
+
+foreach ($tasks as $task) {
+	$st_all = microtime(true);
+	$date = date('Y-m-d H:i:s', time() + 300);
+	mysql_query(sprintf("update eval set will = '%s' where id = %d and will = '%s'", mysql_real_escape_string($date), intval($task['id']), mysql_real_escape_string($task['will'])));
+	if (1 <= mysql_affected_rows()) {
+		$dir = "tmp/" . uniqid();
+		@mkdir($dir, 0777, true);
+
+		copy("eval/eval.jar", "{$dir}/eval.jar");
+		copy("eval/eval.cpp", "{$dir}/eval.cpp");
+		copy("eval/{$task['name']}.hpp", "{$dir}/eval.hpp");
+
+		exec("g++ -O3 {$dir}/eval.cpp -o {$dir}/a.out");
+
+		$output = array();
+		$st = microtime(true);
+		exec("java -Dapple.awt.UIElement=true -Xms64m -Xmx64m -jar {$dir}/eval.jar -exec \"{$dir}/a.out\" -novis -seed {$task['seed']}", $output);
+		$end = microtime(true);
+		$sec = $end - $st;
+		$sec_all = $end - $st_all;
+		$score = 0.0;
+		$time = null;
+		foreach ($output as $line) {
+			if (preg_match('#^Score *= *([0-9\.]+)#', $line, $matches)) {
+				$score = $matches[1];
+			}
+			if (preg_match('#^Time *[=:] *([0-9\.]+)#', $line, $matches)) {
+				$time = $matches[1];
+			}
+		}
+		if ($score) {
+			$dt = date("Y-m-d H:i:s");
+			$outline = "{$task['name']}\t{$task['seed']}\t{$score}\t{$sec}\t{$sec_all}\t{$dt}\n";
+			echo $outline;
+			$setSql = 'set will = null';
+			$setSql .= sprintf(", score = %f", doubleval($score));
+			if($time!==null) {
+				$setSql .= sprintf(", time = %f", doubleval($time));
+			}
+			mysql_query(sprintf("update eval %s where id = %d", $setSql, intval($task['id'])));
+		}
+
+		exec("rm -rf {$dir}");
+	}
+}

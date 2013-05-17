@@ -1,0 +1,21 @@
+#!/usr/bin/php
+<?php
+chdir(dirname(__FILE__) . "/..");
+date_default_timezone_set('Asia/Tokyo');
+
+system("git pull");
+
+$output = array();
+exec("ps aux", $output);
+foreach($output as $line) {
+	if(preg_match('#^root[ \t]+([0-9]+)[ \t]+.*?/(exec|reserve)_eval$#', $line, $matches)) {
+		exit;
+	}
+}
+
+system("./bin/reserve_eval");
+
+$cpu = system('grep "processor" /proc/cpuinfo | wc -l');
+for($i=0; $i<$cpu; ++$i) {
+	system("./bin/exec_eval > /dev/null &");
+}

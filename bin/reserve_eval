@@ -1,0 +1,55 @@
+#!/usr/bin/php
+<?php
+chdir(dirname(__FILE__) . "/..");
+date_default_timezone_set('Asia/Tokyo');
+
+$db = mysql_connect();
+mysql_set_charset("utf8");
+mysql_select_db("topcoder");
+
+mysql_query("create table if not exists eval (id integer AUTO_INCREMENT, name varchar(32), seed integer, score double, time double, n double, will datetime, PRIMARY KEY(id), unique uidx1(name, seed) ) engine=INNODB");
+//mysql_query("alter table eval add index idx2 (seed, score)");
+mysql_query("alter table eval add index idx3 (will)");
+
+$result = mysql_query("select count(*) as count from eval where will is not null");
+$assoc = mysql_fetch_assoc($result);
+$count = $assoc['count'];
+
+function enumName() {
+	$results = array();
+	$dirs = array("");
+	while (!empty($dirs)) {
+		$dir = array_pop($dirs);
+		foreach (scandir("eval/{$dir}") as $name) {
+			if (!preg_match("#^\\.#", $name)) {
+				if (is_dir("eval/{$dir}{$name}")) {
+					$dirs[] = "{$dir}{$name}/";
+				} else {
+					if (preg_match("#(.+)\\.hpp$#", $name, $matches)) {
+						$results[] = "{$dir}{$matches[1]}";
+					}
+				}
+			}
+		}
+	}
+	return $results;
+}
+
+$enumName = enumName();
+$enumNameSQL = "'" . implode("', '", $enumName) . "'";
+
+$seed = 0;
+while($count<300) {
+	$seed += 1;
+	$result = mysql_query("select * from eval where seed = {$seed}");
+	$dic = array();
+	while($assoc = mysql_fetch_assoc($result)) {
+		$dic[$assoc['name']] = true;
+	}
+	foreach($enumName as $name) {
+		if(!array_key_exists($name, $dic)) {
+			mysql_query("insert into eval (name, seed, will) values('{$name}', {$seed}, '2000-01-01 00:00:00')");
+			++$count;
+		}
+	}
+}

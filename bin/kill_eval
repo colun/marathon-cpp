@@ -1,0 +1,13 @@
+#!/usr/bin/php
+<?php
+
+$output = array();
+exec("ps aux", $output);
+
+$pid_list = array();
+foreach($output as $line) {
+    if(preg_match('#^root[ \t]+([0-9]+)[ \t]+.*?/(exec|reserve)_eval$#', $line, $matches)) {
+        $pid_list[] = $matches[1];
+    }
+}
+exec('kill ' . implode(' ', $pid_list));

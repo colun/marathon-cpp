@@ -1,0 +1,7 @@
+#!/bin/bash
+yum install gcc-c++ java-1.7.0-openjdk -y
+yum install php mysql-server php-mysql -y
+service mysqld start
+mysql -e "create database topcoder default character set utf8"
+mysql -e "use topcoder; create table priority(name varchar(32), priority double, PRIMARY KEY(name))"
+

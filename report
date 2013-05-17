@@ -1,0 +1,6 @@
+#!/bin/bash
+mysql -e "use topcoder; select * from eval where will is not null order by seed, id limit 10"
+mysql -e "use topcoder; select count(*) from eval where will is not null"
+mysql -e "use topcoder; select min(seed)-1 as complete_min_seed from eval where will is not null"
+mysql -e "use topcoder; select eval.name as name, avg(score), avg(time), max(seed), count(score) from eval left join priority on eval.name = priority.name where seed<greatest(11, ifnull((select min(seed) from eval where will is not null), (select min(seed) from (select name, max(seed) as seed from eval where will is null group by name) as hoge)+1)) group by name order by priority.priority"
+mysql -e "use topcoder; select eval.name as name, avg(score), avg(time), max(seed), count(score) from eval left join priority on eval.name = priority.name where seed<greatest(11, ifnull((select min(seed) from eval where will is not null), (select min(seed) from (select name, max(seed) as seed from eval where will is null group by name) as hoge)+1)) group by name order by avg(score) desc limit 10"
