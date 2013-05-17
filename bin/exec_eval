@@ -38,7 +38,7 @@ foreach ($tasks as $task) {
 		$score = 0.0;
 		$time = null;
 		foreach ($output as $line) {
-			if (preg_match('#^Score *= *([0-9\.]+)#', $line, $matches)) {
+			if (preg_match('#^Score *[=:] *([0-9\.]+)#', $line, $matches)) {
 				$score = $matches[1];
 			}
 			if (preg_match('#^Time *[=:] *([0-9\.]+)#', $line, $matches)) {

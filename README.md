@@ -1,4 +1,4 @@
-Ž©“®Ì“_ƒeƒ“ƒvƒŒ[ƒg in ƒNƒ‰ƒEƒh for TopCoderƒ}ƒ‰ƒ\ƒ“ƒ}ƒbƒ`
+Ž©“®Ì“_ƒeƒ“ƒvƒŒ[ƒg in ƒNƒ‰ƒEƒh for ƒ}ƒ‰ƒ\ƒ“ƒ}ƒbƒ`
 ==================================================
 
 –{Ž©“®Ì“_ƒVƒXƒeƒ€‚ÍA‘¼‚ÌƒVƒXƒeƒ€‚Æ‚Ì‹¤‘¶‚ª‰Â”\‚È—l‚É‚Íì‚ç‚ê‚Ä‚¢‚Ü‚¹‚ñB
@@ -17,6 +17,26 @@ CentOS(64bit)‚ð‘O’ñ‚Éì‚ç‚ê‚Ä‚¢‚Ü‚·‚ªA‘¼‚ÌOS‚Å‚à•ÏX‚Í•K—v‚©‚à‚µ‚ê‚È‚¢‚Å‚·‚ªA“
 ----
 
 ‚±‚ÌƒvƒƒWƒFƒNƒg‚ðAƒvƒ‰ƒCƒx[ƒg‚ÈgitƒŠƒ|ƒWƒgƒŠ‚Æ‚µ‚Ä‚Ç‚±‚©‚É•¡»‚µ‚ÄŽg‚Á‚Ä‚­‚¾‚³‚¢B
+
+isvnƒŠƒ|ƒWƒgƒŠ‚Æ‚µ‚Ä•¡»‚µ‚½ê‡‚ÍAbin/cron_eval‚È‚Ç‚É‚ ‚é"git pull"‚ð"svn update ."‚É•ÏX‚·‚é“™‚ÌC³‚ª•K—v‚Å‚·j
+
+ŽŸ‚ÉAevalƒtƒHƒ‹ƒ_‚Ìeval.cpp‚ðA–â‘è‚É‡‚Á‚½‚à‚Ì‚É•ÏX‚µ‚Ä‚­‚¾‚³‚¢B
+
+‚Ü‚½AevalƒtƒHƒ‹ƒ_‚Éeval.jar‚ð’u‚¢‚Ä‚­‚¾‚³‚¢B
+iŒöŽ®jar‚Ìƒtƒ@ƒCƒ‹–¼‚ð•ÏX‚µ‚½‚à‚Ì‚Åok‚Èê‡‚ª‚Ù‚Æ‚ñ‚ÇB‚¤‚Ü‚­s‚©‚È‚¢ê‡‚ÍAbin/exec_eval‚ÌexecŽü‚è‚ð•Ï‚¦‚Ä‚Ý‚é‚È‚Ç‚µ‚Ä‚Ý‚Ä‚­‚¾‚³‚¢j
+
+Ì“_‚³‚¹‚éŽž‚É‚ÍAevalƒtƒHƒ‹ƒ_“à‚Éhppƒtƒ@ƒCƒ‹‚ð’u‚¢‚Ä‚­‚¾‚³‚¢BevalƒtƒHƒ‹ƒ_“à‚É’u‚¢‚½hppƒtƒ@ƒCƒ‹‚ÍAÌ“_Žž‚Éeval.hpp‚Æ‚µ‚Ä–¼‘O•ÏX‚µ‚ÄƒRƒs[‚³‚êAeval.cppŒo—R‚ÅŒÄ‚Ño‚³‚ê‚ÄƒRƒ“ƒpƒCƒ‹‚³‚êAeval.jarŒo—R‚ÅŽÀs‚³‚ê‚Ü‚·B
+
+Score = ****
+
+Time = ****
+
+‚Ì—l‚Éo—Í‚³‚ê‚½‚à‚Ìis“ª‚©‚çŽn‚Ü‚Á‚Ä‚é•K—v‚ ‚èj‚ªAƒXƒRƒA‚âƒ^ƒCƒ€‚Æ‚µ‚Ä”FŽ¯‚³‚ê‚ÄA‹L˜^‚³‚ê‚Ü‚·B
+
+‚±‚ê‚ç‚Ìƒtƒ@ƒCƒ‹‚ð’u‚«Š·‚¦‚½‚à‚Ì‚ðAgitƒŠƒ|ƒWƒgƒŠ‚âsvnƒŠƒ|ƒWƒgƒŠ‚ÉƒRƒ~ƒbƒg‚µ‚Ä‚¨‚«AŽŸ‚Ì€–Ú‚Å—pˆÓ‚·‚éƒT[ƒo[‚©‚çŽ©“®ƒAƒbƒvƒf[ƒg‚³‚¹‚È‚ª‚çŽ©“®Ì“_‚ðs‚Á‚Ä‚¢‚­‚±‚Æ‚É‚È‚è‚Ü‚·B
+
+ƒT[ƒo[‚Ö‚ÌƒCƒ“ƒXƒg[ƒ‹
+-------------------
 
 ‚Ü‚Á‚³‚ç‚ÈOSiCentOS6 64bit„§j‚É‘Î‚µ‚ÄArootŒ ŒÀ‚É‚ÄAˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ÅƒCƒ“ƒXƒg[ƒ‹‚·‚éB
 
